@@ -5,22 +5,6 @@ export const getDataRumahSakit = (req, res) => {
         req.params.id
     ]
 
-    // getData(data, (err, results) => {
-    //     if (err) {
-    //         res.status(422).send({
-    //             status: false,
-    //             message: err
-    //         })
-    //         return
-    //     }
-    //     res.status(200).send({
-    //         status: true,
-    //         message: "data found",
-    //         data: results
-    //     })
-    // })
-
-
     rumahSakit.findAll({
         attributes: [
             ['RUMAH_SAKIT', 'nama'],
@@ -42,8 +26,8 @@ export const getDataRumahSakit = (req, res) => {
                 model: kabKota,
                 as: 'kabKota',
                 attributes:[
-                    ['link', 'id'],
-                    ['KAB/KOTA', 'nama']
+                    ['id', 'id'],
+                    ['nama', 'nama']
                 ]
             }
         ]
@@ -89,12 +73,14 @@ export const getDataRumahSakitFilterbyKabKotaId = (req, res) => {
     // })
     // console.log(req.user.rsId);
     // console.log(req.params.kabkotaid)
+
+    // console.log(req.query.kabkotaid)
+
     const count = req.user.rsId.length;
     if(count==2){
-        // console.log('dinkes prov')
         dataRumahSakit.findAll({
             where: {
-                kab_kota_id: req.params.kabkotaid
+                kab_kota_id: req.query.kabkotaid
             }
         })
         .then((results) => {

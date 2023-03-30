@@ -104,34 +104,34 @@ router.get(
 router.get('/apisirs/jenisgolongansebabpenyakit', verifyToken, getDataJenisGolonganSebabPenyakit)
 
 // DINKES PROVINSI
-router.post('/apisirsadmin/login', loginadmin)
-router.delete('/apisirsadmin/logout', logoutadmin)
-router.get('/apisirsadmin/token', refreshToken)
+router.post('/apisirs/loginadmin', loginadmin)
+router.delete('/apisirs/logoutadmin', logoutadmin)
+router.get('/apisirs/token', refreshToken)
 
 // Get Data Dinkes
-// router.get('/apisirs/apisirsadmin/:id', verifyToken, getDataRumahSakit)
+// router.get('/apisirs/apisirs/:id', verifyToken, getDataRumahSakit)
 
 // GET DATA KAB KOTA
-router.get('/apisirsadmin/kabkota', verifyToken, getDataKabKota)
+router.get('/apisirs/kabkota', verifyToken, getDataKabKota)
 
 // GET DATA KABKOTA DINKES KAB
-// router.get('/apisirsadmin/kabkotaid', verifyToken, getDataKabKotabyID)
+// router.get('/apisirs/kabkotaid', verifyToken, getDataKabKotabyID)
 
 // GET DATA RS BY KAB KOTA
-router.get('/apisirsadmin/rumahsakit/:kabkotaid', verifyToken, getDataRumahSakitFilterbyKabKotaId)
+router.get('/apisirs/rumahsakit', verifyToken, getDataRumahSakitFilterbyKabKotaId)
 
 // Validasi Data
-router.get('/apisirsadmin/validasi', verifyToken, getDataValidasiByRsId)
-router.post('/apisirsadmin/validasi', verifyToken, insertValidasi)
-router.patch('/apisirsadmin/validasi/:id', verifyToken, updateValidasi)
-router.get('/apisirsadmin/statusvalidasi', getStatusValidasi)
+router.get('/apisirs/validasi', verifyToken, getDataValidasiByRsId)
+router.post('/apisirs/validasi', verifyToken, insertValidasi)
+router.patch('/apisirs/validasi/:id', verifyToken, updateValidasi)
+router.get('/apisirs/statusvalidasi', getStatusValidasi)
 
 // // GET DATA
-router.get('/apisirsadmin/rlsatutitiktiga', verifyToken, getDataRLSatuTitikTigaKodeRSTahun)
-router.get('/apisirsadmin/rltigatitiksatu', verifyToken, getDataRLTigaTitikSatuKodeRSTahun)
-router.get('/apisirsadmin/rltigatitikenam', verifyToken, getDataRLTigaTitikEnamKodeRSTahun)
-router.get('/apisirsadmin/rltigatitiksembilan', verifyToken, getDataRLTigaTitikSembilanKodeRSTahun)
-router.get('/apisirsadmin/rlempatb',verifyToken, getDataRLEmpatBKodeRSTahun)
-router.get('/apisirsadmin/rlempatbsebab', verifyToken, getDataRLEmpatBSebabKodeRSTahun)
+router.get('/apisirs/rlsatutitiktigaadmin', verifyToken, getDataRLSatuTitikTigaKodeRSTahun)
+router.get('/apisirs/rltigatitiksatuadmin', verifyToken, getDataRLTigaTitikSatuKodeRSTahun)
+router.get('/apisirs/rltigatitikenamadmin', verifyToken, getDataRLTigaTitikEnamKodeRSTahun)
+router.get('/apisirs/rltigatitiksembilanadmin', verifyToken, getDataRLTigaTitikSembilanKodeRSTahun)
+router.get('/apisirs/rlempatbadmin',verifyToken, getDataRLEmpatBKodeRSTahun)
+router.get('/apisirs/rlempatbsebabadmin', verifyToken, getDataRLEmpatBSebabKodeRSTahun)
 
 export default router
