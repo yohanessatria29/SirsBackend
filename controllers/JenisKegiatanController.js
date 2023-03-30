@@ -1,6 +1,5 @@
 import { jenisKegiatan } from '../models/JenisKegiatan.js'
 import { Op } from "sequelize";
-import { jenisGroupKegiatanHeader } from '../models/RLTigaTitikTujuh.js'
 export const getDataJenisKegiatan = (req, res) => {
     jenisKegiatan.findAll({
         attributes: ['id','no','nama'],
