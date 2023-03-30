@@ -1,41 +1,6 @@
 ### Get User Data
-GET http://localhost:5000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzI5NzQ3MTMsImV4cCI6MTY3MzA2MTExM30.yLEXr93n-48p1oY3qlnt3C_-5gCwtNt3LsfknWVjMrw
-
-### Get Data Rumah Sakit
-GET http://localhost/apisirs/rumahsakit/3174063
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ5NTkyMTksImV4cCI6MTY3NDk2MDExOX0.B26S0hQh72A2aAjpv_6u8ATlfoqrqHjx675zyeixeHY
-
-### Insert New User
-POST http://localhost/apisirs/users
-Content-Type: application/json
-
-{
-    "nama": "keane",
-    "email": "keane@gmail.com",
-    "password": "12345",
-    "rsId": null
-}
-
-### Change Password
-PATCH http://localhost:8000/apisirs/users/26/admin
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ5NTY5MDMsImV4cCI6MTY3NDk1NzgwM30.e32VRqRf09zZ9r886mMHF680JsB_ztuY-7sW8HpFoO4
-
-{
-    "passwordLama": "12345",
-    "passwordBaru": "123",
-    "passwordBaruConfirmation": "123"
-}
-
-### Login
-POST http://localhost:8000/apisirs/login
-Content-Type: application/json
-
-{
-    "userName": "3174063",
-    "password": "12345"
-}
+GET http://localhost/apisirs/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwiamVuaXNfdXNlcl9pZCI6MywibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc5OTkyMjY4LCJleHAiOjE2ODUxNzYyNjh9.UwJyBRhNHK37iheXU8ZCskKJjzArv7Z41vSSXYLq0DM
 
 ###
 GET http://localhost/apisirs/rllimatitiksatu?tahun=2022-02-01
@@ -62,253 +27,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiO
 GET http://localhost/apisirs/jenistindakan?rlid=9
 ##################################################
 
-### RL 1.2 post
-POST http://localhost:5000/apisirs/rlsatutitikdua 
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ4MTQyMDQsImV4cCI6MTY3NDgxNzIwNH0.r6mr_m1FTowyBtI4auf8MN-rBItDEhJEqitjOfYysH8
-
-{
-    "tahun" : 2023, 
-    "bor" : 0, 
-    "los" : 0, 
-    "bto" : 0,
-    "toi" : 0, 
-    "ndr" : 0, 
-    "gdr" : 0, 
-    "rataKunjungan": 0
-}
-
-### RL3.9 READ
-GET http://localhost/apisirs/rltigatitiksembilan?tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ4MTI5MjcsImV4cCI6MTY3NDgxMjkzMn0.rLZlRPq07FFsaCj7bCq_wL7bpP3D6lbwV6jzVzNdtOI
-
-### RL 1.3 READ
-GET http://localhost/apisirs/rlsatutitiktiga?tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ5MjAxOTMsImV4cCI6MTY3NDkyMDQ5M30.kkirnreeRucqIbvcyWLzCo69CyiuNiDYS5R2wpk7ew4
-
-### RL 3.1 Detail READ
-GET http://localhost/apisirs/rlsatutitiktigadetail/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ5MTk2MjcsImV4cCI6MTY3NTAwNjAyN30.vF7OHTyzTxhPy0hF_8VVaE1Zf7BKLi6vGXYUpT8pyRk
-
-### RL 1.3 CREATE
-POST http://sirs6.kemkes.go.id/apisirs/rlsatutitiktiga
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWEiOiJSUyBVbXVtIERhZXJhaCBLYWJ1cGF0ZW4gQWNlaCBCZXNhciIsImVtYWlsIjoiMTEwODAxNSIsInJzSWQiOiIxMTA4MDE1IiwiaWF0IjoxNjc1MTUyMjY3LCJleHAiOjE2NzUxNTU4Njd9.E12wICnfdU-umrVI30uN4DUVL5mkSqiuZvZbM-75Fco
-
-{
-    "tahun": 2021,
-    "data": [
-        {
-            "jenisPelayananId": 45,
-            "jumlahTempatTidur": 7,
-            "kelasVVIP": 8,
-            "kelasVIP": 9,
-            "kelas1": 10,
-            "kelas2": 11,
-            "kelas3": 12,
-            "kelasKhusus": 13
-        }
-    ]
-}
-
-
-
-### RL 1.3 UPDATE
-PATCH  http://127.0.0.1/apisirs/rlsatutitiktiga/3
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ0NDYwOTUsImV4cCI6MTY3NDQ0OTY5NX0.zmmaPe4Uw3o-aYdjCi63HabctpZQkXiZZW2UuJ-U_bI
-
-{
-    "jumlahTempatTidur": 71,
-    "kelasVVIP": 8,
-    "kelasVIP": 9,
-    "kelas1": 10,
-    "kelas2": 11,
-    "kelas3": 12,
-    "kelasKhusus": 13
-}
-
-### RL 1.3 DELETE
-DELETE http://127.0.0.1/apisirs/rlsatutitiktiga/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ0NDYwOTUsImV4cCI6MTY3NDQ0OTY5NX0.zmmaPe4Uw3o-aYdjCi63HabctpZQkXiZZW2UuJ-U_bI
-
-
-### RL 3.1 READ
-GET http://127.0.0.1/apisirs/rltigatitiksatu?tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ0MDU2MDUsImV4cCI6MTY3NDQwOTIwNX0.YDLbC6Gu9ydjrV2OAbP8Su_Ql6wYu40GBo5jbG6YvE0
-
-### RL 3.1 Detail READ
-GET http://localhost/apisirs/rltigatitiksatudetail/76
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzM4NzkxNDYsImV4cCI6MTY3Mzg3OTIwNn0.6-JyU6zqses3YCJxTOYrnhSVjtyxiAL-eIcVJqA8EW4
-
-### RL 3.1 CREATE
-POST http://localhost/api/rltigatitiksatu
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzM0MzA5MDEsImV4cCI6MTY3MzQzMDk2MX0.1bV9REaGMzogaRw53Njj3HfSH_UOUWhMBPXLfzLrwDk
-
-{
-    "tahun": 1904,
-    "data": [
-        {
-            "jenisPelayananId": 1,
-            "jumlahPasienAwalTahun": 2,
-            "jumlahPasienMasuk": 3,
-            "pasienKeluarHidup": 4,
-            "kurangDari48Jam": 4,
-            "lebihDariAtauSamaDengan48Jam":5,
-            "jumlahLamaDirawat": 5,
-            "jumlahPasienAkhirTahun": 6,
-            "jumlahHariPerawatan": 7,
-            "kelasVVIP": 8,
-            "kelasVIP": 9,
-            "kelas1": 10,
-            "kelas2": 11,
-            "kelas3": 12,
-            "kelasKhusus": 13
-        },
-        {
-            "jenisPelayananId": 2,
-            "jumlahPasienAwalTahun": 3,
-            "jumlahPasienMasuk": 4,
-            "pasienKeluarHidup": 5,
-            "kurangDari48Jam": 6,
-            "lebihDariAtauSamaDengan48Jam":7,
-            "jumlahLamaDirawat": 5,
-            "jumlahPasienAkhirTahun": 6,
-            "jumlahHariPerawatan": 7,
-            "kelasVVIP": 8,
-            "kelasVIP": 9,
-            "kelas1": 10,
-            "kelas2": 11,
-            "kelas3": 12,
-            "kelasKhusus": 13
-        }
-    ]
-}
-
-### RL 3.1 UPDATE
-PATCH http://localhost/apisirs/rltigatitiksatu/76
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzM4NzkxNDYsImV4cCI6MTY3Mzg3OTIwNn0.6-JyU6zqses3YCJxTOYrnhSVjtyxiAL-eIcVJqA8EW4
-
-{
-    "jumlahPasienAwalTahun": 1,
-    "jumlahPasienMasuk": 3,
-    "pasienKeluarHidup": 4,
-    "kurangDari48Jam": 4,
-    "lebihDariAtauSamaDengan48Jam":5,
-    "jumlahLamaDirawat": 5,
-    "jumlahPasienAkhirTahun": 6,
-    "jumlahHariPerawatan": 7,
-    "kelasVVIP": 8,
-    "kelasVIP": 9,
-    "kelas1": 10,
-    "kelas2": 11,
-    "kelas3": 12,
-    "kelasKhusus": 13
-}
-
-### RL 3.1 DELETE
-DELETE http://localhost/api/rltigatitiksatu/42
-
-
-
-###RL 3.7 CREATE
-POST  http://localhost/apisirs/rltigatitiktujuh
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ1NDc1MjgsImV4cCI6MTY3NDU1MTEyOH0.I_S_56Jl4OkTNEjVqhUoWG5LU-eLKXDtsGUfE2_VDDE
-
-{
-    "tahun": 2000,
-    "data": [
-        {
-            "jenisKegiatanId": 2,
-            "jumlah": 13
-            
-        },
-        {
-            "jenisKegiatanId": 2,
-            "jumlah": 13
-        }
-    ]
-}
-
-###RL 3.7 CREATE
-POST  http://localhost/apisirs/rltigatitiktujuh
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ1NDc1MjgsImV4cCI6MTY3NDU1MTEyOH0.I_S_56Jl4OkTNEjVqhUoWG5LU-eLKXDtsGUfE2_VDDE
-
-{
-    "tahun": 2000,
-    "data": [
-        {
-            "jenisKegiatanId": 2,
-            "jumlah": 13
-            
-        },
-        {
-            "jenisKegiatanId": 2,
-            "jumlah": 13
-        }
-    ]
-}
-
-
-### RL 3.7 READ
-GET http://localhost/apisirs/rltigatitiktujuh?tahun=2000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQxODg1MzIsImV4cCI6MTY3NDE4ODU5Mn0.cqf_4IWK9TLsAKD4pG0xdlrMqJoHAB9hbz0zH-W2_R4
-
-### RL 3.7 Update
-PATCH http://localhost/apisirs/rltigatitiktujuhdetail/32
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQxODg2MTIsImV4cCI6MTY3NDE4ODY3Mn0.ktmPEvY_YDwDZrGNhf-AWW29hlPjIs5GqktWRe8geDw
-
-{  
-    "rl_tiga_titik_tujuh_id": 69,
-    "user_id": 433,
-    "jenis_kegiatan_id": 2,
-    "jumlah": 15
-}
-
-### RL 3.7 Delete
-DELETE  http://localhost/apisirs/rltigatitiktujuhdetail/54
-
-### RL 3.2 Delete
-
-DELETE  http://localhost/apisirs/rltigatitikdua/123
-uthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsIm5hbWEiOiJkd2lwIiwiZW1haWwiOiJrb3Rha2VsZWt0cm9uaWtAZ21haWwuY29tIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ2MTkzNTcsImV4cCI6MTY3NDYyMjk1N30.0m0oUhZ6aSoERvz35TexUsjmJSxFIYc2gpExYfGyQ3c
-
-### RL 3.2 CREATE POST 
-http://localhost/apisirs/rltigatitikdua 
-Content-Type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMzLCJuYW1hIjoiUlMgS2Fua2VyIERoYXJtYWlzIiwiZW1haWwiOiIzMTc0MDYzIiwicnNJZCI6IjMxNzQwNjMiLCJpYXQiOjE2NzQ4MjIxMzEsImV4cCI6MTY3NDgyMjczMX0.NKCE7uH_67rC-wKzbKRd8owd4AIW9PlAZ9WzUCSNub8
-
-{
-"tahun": 1902, 
-"data": [
-    {
-        "jenisPelayananId": 2, 
-        "totalPasienRujukan": 2, 
-        "totalPasienNonRujukan": 4, 
-        "tindakLanjutPelayananDirawat": 5, 
-        "tindakLanjutPelayananDirujuk": 5, 
-        "matiDiUGD": 3, 
-        "doa": 3
-    }]
-}
-
-### RL 5.1
-POST http://sirs6.kemkes.go.id/apisirs/rllimatitiksatu
-Content-Type: application/json
-Authorization: 
-
-{
-    "tahun": "2022",
-    "tahun"
-}
-
-
-
 ### ADMIN DINKES
 
 ### LOGIN
@@ -329,38 +47,69 @@ GET http://localhost:8000/apisirsadmin/token
 
 ### GET DATA KAB/KOTA
 GET http://localhost:8000/apisirsadmin/kabkota
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc4OTM1NDA3LCJleHAiOjE2ODQxMTk0MDd9.Qz3wEdJ0M3NuZSdMBMlW1cjITgp7pRWzHPoaUAF-ETk
-
-### GET DATA KAB/KOTA DINKES KAB
-# GET http://localhost:8000/apisirsadmin/kabkotaid
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc4NDA5MzI4LCJleHAiOjE2ODM1OTMzMjh9.ULmld4zIINQpFBXFMr7r7XOAZh7WhvAoo9jElvIPH_0
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
 
 ### GET DATA RS BY KAB/KOTA
-GET http://localhost:8000/apisirsadmin/rumahsakit/3275
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc4OTM4MjAyLCJleHAiOjE2ODQxMjIyMDJ9.pT9Mcuzaghk8CJApJKNkSI5Quqt2tpq5nEj6jwi6wEc
+GET http://localhost:8000/apisirsadmin/rumahsakit/3171
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk2OTA1LCJleHAiOjE2ODUxODA5MDV9.fhfF6pWswxsSiXKSb4djEjXSHveF5lof6oOE8L1RSTM
+
+### GET DATA VALIDASI
+
+
+### INPUT VALIDASI
+
 
 ### GET DATA RL 1.3
-GET http://localhost:8000/apisirsadmin/rlsatutitiktiga/?koders=3274090&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc4OTM4MjAyLCJleHAiOjE2ODQxMjIyMDJ9.pT9Mcuzaghk8CJApJKNkSI5Quqt2tpq5nEj6jwi6wEc
+GET http://localhost:8000/apisirsadmin/rlsatutitiktiga/?koders=3171665&tahun=2022
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
 
 
 ### GET DATA RL 3.1
-GET http://localhost:8000/apisirsadmin/rltigatitiksatu/?koders=3274090&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc4OTM4MjAyLCJleHAiOjE2ODQxMjIyMDJ9.pT9Mcuzaghk8CJApJKNkSI5Quqt2tpq5nEj6jwi6wEc
+GET http://localhost:8000/apisirsadmin/rltigatitiksatu/?koders=3174063&tahun=2022
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
 
 ### GET DATA RL 36
-GET http://localhost:8000/apisirsadmin/rltigatitikenam/?koders=3274090&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwiamVuaXNfdXNlcl9pZCI6MywibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjc5NjE5OTU4LCJleHAiOjE2ODQ4MDM5NTh9.Z5hXI8wLsa-FKTWySiFRGFLWiJ3U8ywqML0MPTAecms
+GET http://localhost:8000/apisirsadmin/rltigatitikenam/?koders=3216218&tahun=2022
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0OCwiamVuaXNfdXNlcl9pZCI6MywibmFtYSI6IkRpbmtlcyBLb3RhIEJla2FzaSIsImVtYWlsIjoiMzI3NSIsInJzSWQiOiIzMjc1IiwiaWF0IjoxNjgwMTAxMzQ1LCJleHAiOjE2ODUyODUzNDV9.zs_FfDy5-Mnabi9OW5j3WaFrEo0JZA43w2i0Ms157Tc
 
 ### GET DATA RL 39
 GET http://localhost:8000/apisirsadmin/rltigatitiksembilan/?koders=3216218&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc3MjI2MjM3LCJleHAiOjE2ODI0MTAyMzd9.67gYf_PoUlViUgGzNaA070iOEu7GmNju9S3N9jlGNVU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk2OTA1LCJleHAiOjE2ODUxODA5MDV9.fhfF6pWswxsSiXKSb4djEjXSHveF5lof6oOE8L1RSTM
 
 ### GET DATA RL 4B
-GET http://localhost:8000/apisirsadmin/rlempatb/?koders=3274090&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAxLCJuYW1hIjoiUlMgVW11bSBTdW1iZXIgS2FzaWgiLCJlbWFpbCI6IjMyNzQwOTAiLCJyc0lkIjoiMzI3NDA5MCIsImlhdCI6MTY3NDAzNjM1NiwiZXhwIjoxNjc5MjIwMzU2fQ.rrERmJoICdsG9MfyzxqDLNGTxWILxg-MIPQwzW5qCDM
+GET http://localhost:8000/apisirsadmin/rlempatb/?koders=3171665&tahun=2022
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
 
 ### GET DATA RL 4B SEBAB
-GET http://localhost:8000/apisirsadmin/rlempatbsebab/?koders=3274090&tahun=2022
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAxLCJuYW1hIjoiUlMgVW11bSBTdW1iZXIgS2FzaWgiLCJlbWFpbCI6IjMyNzQwOTAiLCJyc0lkIjoiMzI3NDA5MCIsImlhdCI6MTY3NDAzNjM1NiwiZXhwIjoxNjc5MjIwMzU2fQ.rrERmJoICdsG9MfyzxqDLNGTxWILxg-MIPQwzW5qCDM
+GET http://localhost:8000/apisirsadmin/rlempatbsebab/?koders=3171665&tahun=2022
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
+
+### Validasi Input
+POST http://localhost:8000/apisirsadmin/validasi
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk0OTg0LCJleHAiOjE2ODUxNzg5ODR9.DWijs60oUGeQx1ZkQj5e2WuSJ8dXih4nfr1QU8UrW8E
+
+{
+    "rsId": "3171665",
+    "rlId": "14",
+    "tahun": "2022-01-01",
+    "statusValidasiId":1,
+    "catatan": "SUCCESS"
+}
+
+### Validasi Update
+PATCH http://localhost:8000/apisirsadmin/validasi/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk1OTg3LCJleHAiOjE2ODUxNzk5ODd9.7AVWsbOLC1x7wsSfWjn8SgznNQgCR1Lx-ZND6xt4p8I
+
+{
+    "statusValidasiId":2,
+    "catatan":"sudah divalidasi jangan lupa bayar"
+}
+
+### GET DATA Validasi
+GET http://localhost:8000/apisirsadmin/validasi/?rsid=3216218&rlid=6&tahun=2022-01-01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk0OTg0LCJleHAiOjE2ODUxNzg5ODR9.DWijs60oUGeQx1ZkQj5e2WuSJ8dXih4nfr1QU8UrW8E
+
+### GET PILIHAN VALIDASI
+GET http://localhost:8000/apisirsadmin/statusvalidasi/

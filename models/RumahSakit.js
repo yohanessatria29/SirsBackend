@@ -67,6 +67,9 @@ export const dataRumahSakit = databaseRSOnline.define(`data`,
     },
     kab_kota_id:{
         type: DataTypes.STRING
+    },
+    KLS_RS:{
+        type:DataTypes.INTEGER
     }
 })
 
