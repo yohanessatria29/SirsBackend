@@ -30,11 +30,11 @@ GET http://localhost/apisirs/jenistindakan?rlid=9
 ### ADMIN DINKES
 
 ### LOGIN
-POST http://localhost:8000/apisirsadmin/login
+POST http://localhost:8000/apisirs/loginadmin
 Content-Type: application/json
 
 {
-    "userName": "3275",
+    "userName": "32",
     "password": "12345"
 }
 
@@ -46,15 +46,12 @@ DELETE http://localhost:8000/apisirsadmin/logout
 GET http://localhost:8000/apisirsadmin/token
 
 ### GET DATA KAB/KOTA
-GET http://localhost:8000/apisirsadmin/kabkota
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NiwiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6IkRLSSBQcm92aW5zaSAiLCJlbWFpbCI6IjMxIiwicnNJZCI6IjMxIiwiaWF0IjoxNjc5OTk1MTExLCJleHAiOjE2ODUxNzkxMTF9.0qEp100vkjPZg78JWd7BYJuARe8t_MkrGixvS6iL5ms
+GET http://localhost:8000/apisirs/kabkota
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjgwMTgzNDAzLCJleHAiOjE2ODUzNjc0MDN9.OIdpb-qqYt7SgGJEKKLp5xvxzwYhPJ-m47KFXPQVfUA
 
 ### GET DATA RS BY KAB/KOTA
-GET http://localhost:8000/apisirs/rumahsakit?kabkotaid=3171
+GET http://localhost:8000/apisirs/rumahsakit?kabkotaid=3173
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA0NywiamVuaXNfdXNlcl9pZCI6MiwibmFtYSI6Ikphd2EgQmFyYXQiLCJlbWFpbCI6IjMyIiwicnNJZCI6IjMyIiwiaWF0IjoxNjc5OTk2OTA1LCJleHAiOjE2ODUxODA5MDV9.fhfF6pWswxsSiXKSb4djEjXSHveF5lof6oOE8L1RSTM
-
-### GET DATA VALIDASI
-
 
 ### INPUT VALIDASI
 

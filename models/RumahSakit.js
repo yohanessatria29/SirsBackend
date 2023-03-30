@@ -23,13 +23,13 @@ export const rumahSakit = databaseRSOnline.define(`data`,
     }
 )
 
-export const propinsi = databaseRSOnline.define(`propinsi`, 
+export const propinsi = databaseRSOnline.define(`provinsi`, 
     {
-        propinsi_kode:  {
+        id:  {
             type: DataTypes.STRING,
             primaryKey: true
         },
-        propinsi_name: {
+        nama: {
             type: DataTypes.STRING
         }
     }
@@ -96,7 +96,7 @@ export const getData = (data, callback) => {
 }
 
 rumahSakit.hasOne(propinsi, { 
-    foreignKey: 'propinsi_kode',
+    foreignKey: 'id',
     sourceKey: 'provinsi_id',
     as: 'propinsi'
 })

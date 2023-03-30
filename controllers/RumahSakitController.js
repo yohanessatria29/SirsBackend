@@ -18,8 +18,8 @@ export const getDataRumahSakit = (req, res) => {
                 model: propinsi,
                 as: "propinsi",
                 attributes:[
-                    ['propinsi_kode', 'id'],
-                    ['propinsi_name', 'nama']
+                    ['id', 'id'],
+                    ['nama', 'nama']
                 ]
             },
             {
@@ -51,31 +51,6 @@ export const getDataRumahSakit = (req, res) => {
 }
 
 export const getDataRumahSakitFilterbyKabKotaId = (req, res) => {
-    // dataRumahSakit.findAll({
-    //     where: {
-    //         kab_kota_id: req.params.kabkotaid
-    //     }
-    // })
-    // .then((results) => {
-    //     const message = results.length ? 'data found' : 'data not found'
-    //     res.status(200).send({
-    //         status: true,
-    //         message: message,
-    //         data: results
-    //     })
-    // })
-    // .catch((err) => {
-    //     res.status(422).send({
-    //         status: false,
-    //         message: err
-    //     })
-    //     return
-    // })
-    // console.log(req.user.rsId);
-    // console.log(req.params.kabkotaid)
-
-    // console.log(req.query.kabkotaid)
-
     const count = req.user.rsId.length;
     if(count==2){
         dataRumahSakit.findAll({

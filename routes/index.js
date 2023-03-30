@@ -44,8 +44,7 @@ import { getDataValidasiByRsId, getStatusValidasi, insertValidasi, updateValidas
 
 const router = express.Router()
 
-// Rumah Sakit
-router.get('/apisirs/rumahsakit/:id', verifyToken, getDataRumahSakit)
+
 
 // User
 router.get('/apisirs/users', verifyToken, getDataUser)
@@ -119,6 +118,9 @@ router.get('/apisirs/kabkota', verifyToken, getDataKabKota)
 
 // GET DATA RS BY KAB KOTA
 router.get('/apisirs/rumahsakit', verifyToken, getDataRumahSakitFilterbyKabKotaId)
+
+// Rumah Sakit
+router.get('/apisirs/rumahsakit/:id', verifyToken, getDataRumahSakit)
 
 // Validasi Data
 router.get('/apisirs/validasi', verifyToken, getDataValidasiByRsId)
