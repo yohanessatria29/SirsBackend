@@ -4,7 +4,6 @@ import { rumahSakit } from "../models/RumahSakit.js";
 import joi from "joi";
 
 export const getDataRLEmpatBSebabKodeRSTahun = (req, res) => {
-    
     if(req.user.jenis_user_id == 2){
         rumahSakit.findOne({
           where: {
